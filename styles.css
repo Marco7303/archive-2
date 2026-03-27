@@ -73,7 +73,7 @@ body::before {
 .shell {
   width: min(1080px, calc(100vw - 32px));
   margin: 0 auto;
-  padding: 32px 0 44px;
+  padding: 40px 0 44px;
 }
 
 .hero,
@@ -86,6 +86,49 @@ body::before {
     var(--panel);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+}
+
+.tape {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 10px 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      #f4c542 0 16px,
+      #f4c542 16px 30px,
+      #111111 30px 46px,
+      #111111 46px 60px
+    );
+  color: #111111;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+.tape span {
+  color: rgba(17, 17, 17, 0.92);
+  background: rgba(244, 197, 66, 0.92);
+  padding: 3px 4px;
+}
+
+.tape--top {
+  top: 0;
+  left: 50%;
+  width: min(1100px, calc(100vw - 24px));
+  margin-top: 50px;
+  margin-bottom: 18px;
+  transform: translateX(-50%) rotate(-1.6deg);
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .hero {
@@ -105,7 +148,7 @@ body::before {
 
 h1 {
   margin: 10px 0 12px;
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Syne", "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(2.6rem, 8vw, 5.6rem);
   line-height: 0.9;
   letter-spacing: -0.08em;
@@ -245,7 +288,7 @@ button:hover {
 @media (max-width: 760px) {
   .shell {
     width: min(100vw - 20px, 1080px);
-    padding: 10px 0 24px;
+    padding: 40px 0 24px;
   }
 
   .hero,
@@ -272,5 +315,12 @@ button:hover {
 
   .mobile-controls {
     display: grid;
+  }
+
+  .tape--top {
+    top: 10px;
+    font-size: 0.64rem;
+    gap: 10px;
+    padding: 8px 10px;
   }
 }
