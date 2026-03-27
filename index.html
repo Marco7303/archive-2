@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marco Pagano</title>
+    <meta
+      name="description"
+      content="Under construction portfolio with a Space Invaders-style waiting game."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="stars stars--one" aria-hidden="true"></div>
+    <div class="stars stars--two" aria-hidden="true"></div>
+
+    <main class="shell">
+      <section class="hero">
+        <h1>This page is under construction.</h1>
+        <p class="copy">New work is loading. In the meantime, defend the signal.</p>
+      </section>
+
+      <section class="cabinet" aria-label="Space game">
+        <div class="hud">
+          <div class="hud__group">
+            <span class="hud__label">Score</span>
+            <strong id="score">000</strong>
+          </div>
+          <div class="hud__group">
+            <span class="hud__label">Lives</span>
+            <strong id="lives">03</strong>
+          </div>
+          <div class="hud__group hud__group--wide">
+            <span class="hud__label">Status</span>
+            <strong id="status">Reach 100 to win</strong>
+          </div>
+        </div>
+
+        <div class="screen-wrap">
+          <canvas
+            id="game"
+            width="840"
+            height="560"
+            aria-label="Space Invaders style game"
+          ></canvas>
+          <div class="screen-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="controls">
+          <p>Move with A / D or arrow keys. Shoot with space. Get to 100.</p>
+          <button id="restart" type="button">Restart wave</button>
+        </div>
+
+        <div class="mobile-controls" aria-label="Touch controls">
+          <button id="left-control" type="button">Left</button>
+          <button id="fire-control" type="button">Fire</button>
+          <button id="right-control" type="button">Right</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
